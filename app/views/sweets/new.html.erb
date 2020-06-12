@@ -1,0 +1,12 @@
+<h2>おかし投稿</h2>
+<%= form_for(@sweet, url: sweets_path) do |f| %>
+  <div class="">
+    <%= f.label :name, "おかし名" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="">
+    <%= f.label :opinion, "おかし説明" %>
+    <%= f.text_area :opinion %>
+  </div>
+  <%= f.submit '登録' %>
+<% end %>
