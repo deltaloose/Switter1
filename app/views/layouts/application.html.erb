@@ -10,6 +10,31 @@
   </head>
 
   <body>
+    <header class="">
+      <span class="">Switter</span>
+      <ul class="">
+        <% if user_signed_in? %>
+          <li class="header">
+            Favorite
+          </li>
+          <li class="header">
+            About
+          </li>
+          <li class="header">
+            Logout
+          </li>
+        <% else %>
+          <li class="header">
+            About
+          </li>
+          <li class="header">
+            Sign up
+          </li>
+          <li class="header">
+            Login
+          </li>
+        <% end %>
+    </header>
     <%= yield %>
   </body>
 </html>
