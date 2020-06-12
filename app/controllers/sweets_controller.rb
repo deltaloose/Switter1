@@ -3,6 +3,7 @@ class SweetsController < ApplicationController
   def new
     @sweet = Sweet.new
   end
+  #おかしの新規作成
   def create
     @sweet = Sweet.new(sweet_params)
     @sweet.save
