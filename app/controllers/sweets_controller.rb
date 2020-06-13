@@ -13,4 +13,8 @@ class SweetsController < ApplicationController
   end
   def show
   end
+  private
+    def sweet_params
+      params.require(:sweet).permit(:name, :opinion, :sweet_image)
+    end
 end
