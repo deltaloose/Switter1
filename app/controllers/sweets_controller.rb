@@ -6,15 +6,18 @@ class SweetsController < ApplicationController
   #おかしの新規作成
   def create
     @sweet = Sweet.new(sweet_params)
+    #@sweet.user_id = current_user.id
     @sweet.save
     redirect_to sweets_path
   end
   def index
+    @sweets = Sweet.all
   end
   def show
   end
+
   private
     def sweet_params
-      params.require(:sweet).permit(:name, :opinion, :sweet_image)
+      params.require(:sweet).permit(:name, :opinion, :price, :sweet_image)
     end
 end
