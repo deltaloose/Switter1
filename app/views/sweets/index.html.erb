@@ -14,7 +14,11 @@
   <tbody>
     <% @sweets.each do |sweet| %>
     <tr>
-      <td><%= sweet.name %></td>
+      <td>
+        <%= link_to sweet_path(sweet.id) do %>
+          <%= sweet.name %>
+        <% end %>
+        </td>
       <td><%= sweet.opinion %></td>
     </tr>
     <% end %>
