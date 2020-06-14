@@ -14,10 +14,11 @@ class SweetsController < ApplicationController
     @sweets = Sweet.all
   end
   def show
+    @sweet = Sweet.find(params[:id])
   end
 
   private
     def sweet_params
-      params.require(:sweet).permit(:name, :opinion, :price, :sweet_image)
+      params.require(:sweet).permit(:name, :opinion, :sweet_image)
     end
 end
